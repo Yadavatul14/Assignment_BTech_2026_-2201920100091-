@@ -1,0 +1,18 @@
+NO OF ZERO FILLED SUBARRAY
+class Solution {
+    public long zeroFilledSubarray(int[] nums) {
+        long res=0, cur=0;
+        for(int i:nums)
+        {
+            if(i==0)
+            {
+                cur++;
+                res+=cur;
+            }
+            else{
+                cur=0;
+            }
+        }
+        return res;
+    }
+}
